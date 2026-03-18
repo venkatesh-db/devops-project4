@@ -1,0 +1,137 @@
+
+
+# Layer1  - backend 
+
+# api -> home 
+# Integrate prometheus_client 
+# In every api promtheus increment is added
+# running server
+
+
+# Layer2
+# flow of coder 
+
+#1. create directory in docker 
+#2. copy the code .txt, .py to docker directory
+#3. install the dependencies packages
+#4. run the code
+
+
+# Layer3-SonarQube
+
+SonarQube is a tool used to analyze your code automatically and tell you:
+Is your code clean?
+Is it secure?
+Is it maintainable?
+Are there bugs or vulnerabilities?
+
+1. 🐞 Bugs Detection
+2. 🔐 Security Vulnerabilities
+3. ⚠️ Code Smells
+4. 📊 Code Coverage (Testing)
+
+
+# Layer4- Jenkins 
+
+✅ Jenkins Pipeline – 8 Point Summary
+
+Agent & Tools Setup
+Uses Jenkins agent + configures SonarScanner and environment variables.
+
+Code Checkout
+Pulls latest code from GitHub (main branch).
+
+Dependency Installation
+Installs Python dependencies using pip3.
+
+SonarQube Scan
+Analyzes code for bugs, vulnerabilities, and code quality.
+
+Quality Gate Validation
+Stops pipeline ❌ if code does not meet quality standards.
+
+Docker Image Build
+Builds Docker image for the application.
+
+Docker Push
+Logs into DockerHub securely and pushes the image.
+
+Kubernetes Deployment
+Updates deployment, applies configs, and performs rolling update 🚀
+
+
+# Layer5-kubernetes 
+
+flow of code 
+
+# kubernetes object - deployment 
+# replicas :2
+# match label label 
+# container 
+
+# service object 
+# service name 
+# nodeport  
+# ports 
+  targetport- container port 
+  nodeport 
+
+# Layer6- promtheus
+
+metrics 
+
+
+# Layer7- Grafana 
+
+connect dashboard 
+request count 
+response rate 
+
+
+
+GitHub
+ ↓
+Jenkins
+ ↓
+SonarQube
+ ↓
+DockerHub
+ ↓
+Kubernetes
+ ↓
+Prometheus
+ ↓
+Grafana
+
+
+
+GitHub
+ ↓
+Jenkins
+ ↓
+Unit Tests
+ ↓
+SonarQube
+ ↓
+Docker Build
+ ↓
+DockerHub Push
+ ↓
+Kubernetes Deploy
+ ↓
+Prometheus + Grafana
+
+
+
+GitHub
+↓
+Jenkins
+↓
+SonarQube Scan
+↓
+DockerHub Push
+↓
+Kubernetes Deploy
+↓
+Prometheus + Grafana Monitoring
+
